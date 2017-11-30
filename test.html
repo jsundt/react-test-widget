@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Example Test Page</title>
+  </head>
+  <body class="body">
+    <div class="container">
+      <div class="col-xs-12">  
+
+        <div id="widget"></div>
+
+        <div id="widget2"></div>
+
+      </div>
+    </div>
+    <script src="build/static/js/main.js"></script>
+
+    <script>
+      CharlieHR.config({
+        test: "test"
+      });
+      var testWidget = CharlieHR.widgets.testWidget.new({ selector: "#widget"});
+      testWidget.render();
+
+      var testWidget2 = CharlieHR.widgets.testWidget.new({ selector: "#widget2"});
+      testWidget2.render({ title: "Widget 2"});
+    </script>
+  </body>
+</html>
