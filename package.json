@@ -21,6 +21,10 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.3",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.2",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -28,8 +32,10 @@
     "prop-types": "^15.6.0",
     "raf": "3.4.0",
     "react": "^16.2.0",
+    "react-dates": "^15.3.0",
     "react-dev-utils": "^4.2.1",
     "react-dom": "^16.2.0",
+    "react-moment-proptypes": "^1.5.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "uniqueid": "^1.0.0",
@@ -49,8 +55,12 @@
     "eslint-plugin-react": "^7.4.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "node scripts/start.js",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "node scripts/build.js",
+    "build": "npm-run-all build-css build-js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {

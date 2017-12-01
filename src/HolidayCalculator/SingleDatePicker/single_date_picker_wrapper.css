@@ -1,0 +1,18 @@
+@import url(~react-dates/lib/css/_datepicker.css);
+.SingleDatePickerInput {
+  border-radius: 8px;
+  border: none;
+  margin-left: 15px; }
+
+.DateInput {
+  border-radius: 8px; }
+
+.DateInput_input {
+  font-family: 'chaparral-pro', serif;
+  color: #2e424d;
+  border-radius: 8px; }
+
+.DateInput_input__focused {
+  background: #e0e7eb;
+  color: #2e424d;
+  box-shadow: 0 0 1px rgba(46, 66, 77, 0.35); }

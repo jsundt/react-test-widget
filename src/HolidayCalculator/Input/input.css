@@ -1,0 +1,48 @@
+
+
+
+.e-input {
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+
+  font-family: 'chaparral-pro', serif;
+  color: #2e424d;
+}
+
+.e-radio-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+.e-radio-input:checked + .o-icon {
+  .onoff__yes {
+    opacity: 1;
+    transition: opacity 0.2s 0.1s;
+  }
+
+  .onoff__no {
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  .onoff_check {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.15s;
+  }
+
+  .onoff_bg {
+    fill: #50e2c3;
+    transition: fill 0.2s;
+  }
+}
+

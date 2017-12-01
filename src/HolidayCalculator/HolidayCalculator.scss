@@ -1,0 +1,15 @@
+// This file should include Charlie css needed for the widget
+
+h1, h2, h3, p, a {
+  color: inherit;
+}
+
+.u-bg--white {
+  background-color: #fff;
+  color: #111;
+  border-color: #aaa;
+}
+
+.charliehr-container {
+  display: flex;
+}
