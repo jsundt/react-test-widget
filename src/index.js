@@ -7,21 +7,21 @@ import uniqueid from 'uniqueid';
 import App from './HolidayCalculator/HolidayCalculator';
 
 const CharlieHRConfig = {
-  selector: '#root',
+  selector: '#widget',
   uid: uniqueid({ prefix: 'widget_id_' }),
-  title: 'Default Widget',
-  working_days_label: 'working days',
-  working_week_label: 'working week',
-  allowance_label: 'allowance',
-  has_start_date_label: 'has start date',
-  has_start_date_hint: 'has start date hint',
-  has_end_date_label: 'has end date',
-  has_end_date_hint: 'has end date hint',
-  blurb_title: 'blurb title',
-  blurb_text_1: 'text 1',
-  blurb_text_2: 'text 2',
-  blurb_items: ['text items', 'text items 2'],
-  blurb_text_3: 'text 3',
+  title: 'Use this holiday entitlement calculator to work out employee holiday allowances',
+  working_days_label: 'How many days a week does this employee work?',
+  working_week_label: 'How many days are in a full time working week for your company?',
+  allowance_label: 'What is your holiday entitlement for a full time employee?',
+  has_start_date_label: 'Did this team member start part way through the holiday year?',
+  has_start_date_hint: 'For pro rata holiday calculation.',
+  has_end_date_label: 'Is this team member leaving part way through the holiday year?',
+  has_end_date_hint: 'For pro rata holiday calculation.',
+  blurb_title: 'Get the answers you need quickly',
+  blurb_text_1: 'This annual leave calculator will help any founder, employer, or HR professional quickly work out the holiday entitlement for an employee.',
+  blurb_text_2: 'Use the holiday entitlement calculator to work out:',
+  blurb_items: ['Pro-rated annual leave entitlements for part time staff.', 'Pro-rated holiday allowances for team members beginning or ending their employment in the middle of the year.'],
+  blurb_text_3: 'If you need to work out payment in lieu of notice for someone leaving their job, use the holiday pay calculator instead.',
 };
 
 ReactDOM.render(

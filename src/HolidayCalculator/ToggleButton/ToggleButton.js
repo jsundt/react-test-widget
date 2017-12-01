@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function SvgSwitcher() {
   return (
-    <svg viewBox="0 0 50 50" className="o-icon">
+    <svg viewBox="0 0 50 50" className="charliehr-icon">
       <title>Toggle switch Icon</title>
       <path className="onoff_bg" d="M33.3,36.6H17.1c-6.4,0-11.6-5.2-11.6-11.6v0c0-6.4,5.2-11.6,11.6-11.6h16.2c6.4,0,11.6,5.2,11.6,11.6v0 C44.9,31.4,39.7,36.6,33.3,36.6z" />
 
@@ -17,9 +17,9 @@ function SvgSwitcher() {
 }
 
 const ToggleButton = props => (
-  <div className="u-pos--relative">
+  <div className="charliehr-pos--relative">
     <input
-      className="e-radio-input"
+      className="charliehr-radio-input"
       id={props.id}
       name={props.name}
       type="checkbox"

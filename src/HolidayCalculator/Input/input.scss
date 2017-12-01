@@ -1,0 +1,54 @@
+.charliehr-input {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  color: #2e424d;
+}
+
+.charliehr-input__label {
+  color: inherit;
+  line-height: 1.3em;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.charliehr-radio-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.charliehr-radio-input:checked + .charliehr-icon {
+  .onoff__yes {
+    opacity: 1;
+    transition: opacity 0.2s 0.1s;
+  }
+
+  .onoff__no {
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  .onoff_check {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.15s;
+  }
+
+  .onoff_bg {
+    fill: #50e2c3;
+    transition: fill 0.2s;
+  }
+}
+

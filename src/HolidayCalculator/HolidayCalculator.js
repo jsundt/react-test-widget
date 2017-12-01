@@ -138,12 +138,11 @@ export default class HolidayCalculator extends Component {
 
   render() {
     return (
-      <div className="u-bg--white u-padding--b-50">
-        <div className="container">
-          <section className="row">
-            <div className="col-xs-12 col-md-6">
-              <div className="w-card u-bg--white-115 u-padding--y-25 u-padding--x-25 u-pull--md-t-200">
-                <h1 className="o-text--body u-text--bold u-color--charcoal">{this.props.title}</h1>
+      <div className="charliehr-bg--white u-padding--b-50">
+        <section className="charliehr-container">
+            <div className="charliehr-col--md-6">
+              <div className="charliehr-card charliehr-bg--white-115 u-pull--md-t-200">
+                <h1 className="charliehr-text--lead">{this.props.title}</h1>
 
                 <form className="row">
                   <Input
@@ -197,7 +196,7 @@ export default class HolidayCalculator extends Component {
               </div>
             </div>
 
-            <div className="col-xs-12 col-md-6">
+            <div className="charliehr-col--md-6">
               <HolidayCalculatorResult
                 startDate={this.state.startDateChecked ? this.state.startDate : yearStart()}
                 endDate={this.state.endDateChecked ? this.state.endDate : yearEnd()}
@@ -207,21 +206,20 @@ export default class HolidayCalculator extends Component {
               />
             </div>
 
-            <div className="col-xs-12 col-md-6">
-              <div className="w-card u-bg--white u-padding--y-25 u-padding--x-25">
-                <h2 className="o-text--product u-text--bold">{this.props.blurb_title}</h2>
-                <p className="o-text--body">{this.props.blurb_text_1}</p>
-                <p className="o-text--body">{this.props.blurb_text_2}</p>
+            <div className="charliehr-col--md-6">
+              <div className="charliehr-card charliehr-bg--white-115">
+                <h2 className="charliehr-text--lead">{this.props.blurb_title}</h2>
+                <p className="charliehr-text--body">{this.props.blurb_text_1}</p>
+                <p className="charliehr-text--body">{this.props.blurb_text_2}</p>
                 <ul>
                   {this.props.blurb_items.map((item, index) => (
-                    <li className="o-text--body" key={index}>{item}</li>
+                    <li className="charliehr-text--body" key={index}>{item}</li>
                   ))}
                 </ul>
-                <p className="o-text--body">{this.props.blurb_text_3}</p>
+                <p className="charliehr-text--body">{this.props.blurb_text_3}</p>
               </div>
             </div>
-          </section>
-        </div>
+        </section>
       </div>
     );
   }

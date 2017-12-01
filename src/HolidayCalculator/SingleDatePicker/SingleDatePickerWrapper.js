@@ -8,7 +8,7 @@ import omit from 'lodash/omit';
 
 import 'react-dates/initialize';
 import { SingleDatePicker, SingleDatePickerShape, OrientationShape, anchorDirectionShape, SingleDatePickerPhrases } from 'react-dates';
-import './single_date_picker_wrapper.scss';
+import './single_date_picker_wrapper.css';
 
 
 const propTypes = {

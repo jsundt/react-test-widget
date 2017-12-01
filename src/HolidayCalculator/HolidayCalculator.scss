@@ -1,15 +1,96 @@
 // This file should include Charlie css needed for the widget
 
-h1, h2, h3, p, a {
+@mixin resetTextProperties() {
   color: inherit;
-}
-
-.u-bg--white {
-  background-color: #fff;
-  color: #111;
-  border-color: #aaa;
+  line-height: 1.3em;
 }
 
 .charliehr-container {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.charliehr-col--md-6 {
+  flex: 1 0 100%;
+
+  @media screen and (min-width: 768px) {
+    flex: 1 0 50%;
+  }
+}
+
+
+// Objects
+
+.charliehr-icon {
+  width: 50px;
+  height: 50px;
+  fill: currentColor;
+}
+
+.charliehr-icon--inline {
+  fill: currentColor;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.charliehr-text--headline {
+  @include resetTextProperties();
+  font-size: 32px;
+}
+
+.charliehr-text--title {
+  @include resetTextProperties();
+  font-size: 24px;
+}
+
+.charliehr-text--lead {
+  @include resetTextProperties();
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.charliehr-text--body {
+  @include resetTextProperties();
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.charliehr-card {
+  border-radius: 8px;
+  padding: 16px;
+  margin: 15px 0;
+}
+
+
+// Utilities
+
+.charliehr-pos--relative {
+  position: relative;
+}
+
+.charliehr-text--center {
+  text-align: center;
+}
+
+.charliehr-bg--white {
+  background-color: #fff;
+  color: #2e424d;
+  border-color: #aaa;
+}
+
+.charliehr-bg--white-115 {
+  background-color: #f2f2f2;
+  color: #2e424d;
+  border-color: #aaa;
+}
+
+.charliehr-bg--silver {
+  background-color: #fff;
+  color: #2e424d;
+  border-color: #aaa;
+}
+
+.charliehr-color--danger {
+  color: red;
 }

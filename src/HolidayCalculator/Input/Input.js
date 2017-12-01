@@ -7,11 +7,11 @@ const Input = props => (
   <div className="col-xs-12">
     <label
       htmlFor={props.name}
-      className="o-text--product u-display--block"
+      className="charliehr-input__label"
     >
       {props.description}
       <input
-        className="e-input u-display--block u-width--full u-margin--b-50 u-margin--t-20"
+        className="charliehr-input"
         id={props.name}
         type="number"
         name={props.name}
@@ -19,7 +19,7 @@ const Input = props => (
         onChange={props.onChange}
       />
     </label>
-    <p className="u-color--danger">{props.error}</p>
+    <p className="charliehr-color--danger">{props.error}</p>
   </div>
 );
 

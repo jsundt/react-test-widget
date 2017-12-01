@@ -40,7 +40,7 @@ const ConditionalSingleDatePicker = (props) => {
         {hint()}
       </label>
 
-      <div className="u-display--flex u-margin--b-50">
+      <div className="charliehr-container">
         <ToggleButton
           id={`toggle-button-${props.id}`}
           name={props.checkboxName}

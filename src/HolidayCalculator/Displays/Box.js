@@ -7,14 +7,14 @@ const Box = (props) => {
   }
 
   return (
-    <div className="w-card u-text--center u-bg--silver u-padding--y-50 u-padding--x-25 u-pull--md-t-200">
-      <h2 className="o-text--lead">{props.lead}</h2>
-      <h1 className="o-text--headline u-margin--b-20">{props.headline}</h1>
-      <p className="o-text--product">
+    <section className="charliehr-card charliehr-text--center charliehr-bg--silver u-pull--md-t-200">
+      <h2 className="charliehr-text--lead">{props.lead}</h2>
+      <h1 className="charliehr-text--headline u-margin--b-20">{props.headline}</h1>
+      <p className="charliehr-text--body">
         {props.icon}
         {props.text}
       </p>
-    </div>
+    </section>
   );
 };
 
