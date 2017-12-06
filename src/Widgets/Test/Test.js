@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import '../../shared/cleanslate.css'; // Reset CSS
 import styles from './Test.css';
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className={cleanstate}>
+      <div className="CharlieHR-cleanslate">
         <header>
           <h1>Welcome to the Test Widget: { this.props.title }</h1>
         </header>

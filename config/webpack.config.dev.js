@@ -169,7 +169,7 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   modules: true,
-                  localIdentName: 'CharlieHR-[name]__[local]',
+                  localIdentName: 'CharlieHR-[local]',
                 },
               },
               {

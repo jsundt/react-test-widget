@@ -192,7 +192,7 @@ module.exports = {
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
                         modules: true,
-                        localIdentName: 'charliehr-[name]__[local]',
+                        localIdentName: 'charliehr-[local]',
                       },
                     },
                     {
