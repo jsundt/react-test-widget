@@ -1,27 +1,27 @@
 <html>
   <head>
     <title>Example Test Page</title>
-
-    <link rel="stylesheet" href="build/static/css/widget.css">
   </head>
   <body class="body">
     <div class="container">
       <div class="col-xs-12">
 
-        <div id="widget"></div>
-
-        <div id="widget2"></div>
+        <script data-version="v1" id="1fc508e6-afa6-4de3-bccd-8def2929d438" type='text/javascript'>
+          (function() {function load_widget() {
+              var s = document.createElement('script');
+              var url = 'build/static/js/widget.js';
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = url + ( url.indexOf("?") >= 0 ? "&" : "?") + 'ref=' + encodeURIComponent(window.location.href);
+              var e = document.getElementById('1fc508e6-afa6-4de3-bccd-8def2929d438');
+              e.parentNode.insertBefore(s, e);
+              e.parentNode.addEventListener("load", function(event) { CharlieHR.widgets.setup('1fc508e6-afa6-4de3-bccd-8def2929d438') }, true);
+            }
+            if (window.attachEvent) window.attachEvent('onload', load_widget); else window.addEventListener('load', load_widget, false);
+          })();
+        </script>
 
       </div>
     </div>
-    <script src="build/static/js/widget.js"></script>
-
-    <script>
-      var testWidget = CharlieHR.widgets.testWidget.new({ selector: "#widget"});
-      testWidget.render();
-
-      var testWidget2 = CharlieHR.widgets.testWidget.new({ selector: "#widget2"});
-      testWidget2.render({ title: "Widget 2"});
-    </script>
   </body>
 </html>

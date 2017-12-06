@@ -9,7 +9,7 @@ import TestWidget from './Widgets/Test/Test';
 
 let CharlieHRConfig = {};
 
-export default {
+const CharlieHR = {
   config: (config) => {
     CharlieHRConfig = { ...CharlieHRConfig, config };
   },
@@ -40,5 +40,28 @@ export default {
         };
       },
     },
+    setup: (elementID) => {
+      // Add widget css to page
+      const styles = document.createElement('link');
+      styles.href = 'build/static/css/widget.css';
+      styles.type = 'text/css';
+      styles.rel = 'stylesheet';
+
+      document.getElementsByTagName('head')[0].appendChild(styles);
+
+      // Setup wrapper
+      const widgetWrapper = document.createElement('div');
+      const wrapperID = 'TestWrapperID';
+      widgetWrapper.id = wrapperID;
+
+      const script = document.getElementById(elementID);
+      script.parentNode.insertBefore(widgetWrapper, script);
+
+      // Setup a new widget
+      const widget = CharlieHR.widgets.testWidget.new({ selector: `#${wrapperID}` });
+      widget.render();
+    },
   },
 };
+
+export default CharlieHR;
