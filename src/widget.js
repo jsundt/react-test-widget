@@ -1,9 +1,11 @@
+// This bundle is used to generate the embedable JS of a widget
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import uniqueid from 'uniqueid';
 
-import App from './App';
+import TestWidget from './Widgets/Test/Test';
 
 let CharlieHRConfig = {};
 
@@ -25,7 +27,7 @@ export default {
             };
 
             ReactDOM.render(
-              <App
+              <TestWidget
                 uid={uid}
                 title={widgetConfig.title}
               />,

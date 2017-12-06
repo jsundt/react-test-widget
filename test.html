@@ -1,10 +1,12 @@
 <html>
   <head>
     <title>Example Test Page</title>
+
+    <link rel="stylesheet" href="build/static/css/widget.css">
   </head>
   <body class="body">
     <div class="container">
-      <div class="col-xs-12">  
+      <div class="col-xs-12">
 
         <div id="widget"></div>
 
@@ -12,12 +14,9 @@
 
       </div>
     </div>
-    <script src="build/static/js/main.js"></script>
+    <script src="build/static/js/widget.js"></script>
 
     <script>
-      CharlieHR.config({
-        test: "test"
-      });
       var testWidget = CharlieHR.widgets.testWidget.new({ selector: "#widget"});
       testWidget.render();
 

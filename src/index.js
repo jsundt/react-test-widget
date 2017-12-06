@@ -1,7 +1,9 @@
+// This bundle is used to Test widget in dev, available at localhost:3000
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import TestWidget from './Widgets/Test/Test';
 
 const CharlieHRConfig = {
   selector: '#widget',
@@ -10,7 +12,7 @@ const CharlieHRConfig = {
 };
 
 ReactDOM.render(
-  <App
+  <TestWidget
     uid={CharlieHRConfig.uid}
     title={CharlieHRConfig.title}
   />,

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './App.css';
+import styles from './Test.css';
 
 class App extends Component {
   state = {}
 
   render() {
     return (
-      <div>
+      <div className={cleanstate}>
         <header>
           <h1>Welcome to the Test Widget: { this.props.title }</h1>
         </header>
