@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './App.css';
+
 class App extends Component {
   state = {}
 
@@ -10,7 +12,7 @@ class App extends Component {
         <header>
           <h1>Welcome to the Test Widget: { this.props.title }</h1>
         </header>
-        <p>
+        <p className={styles.test}>
           This test widget has some relevance to <a href="https://www.charliehr.com">CharlieHR</a>
         </p>
       </div>
