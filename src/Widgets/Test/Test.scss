@@ -1,5 +1,14 @@
-$red: red;
+.cleanslate {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
-.test {
-  color: $red;
+.button {
+  background-color: red;
+  padding: 20px;
+  background-image: none;
+}
+
+.buttonActive {
+  background-color: green;
 }

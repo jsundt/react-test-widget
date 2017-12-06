@@ -1,5 +1,7 @@
 'use strict';
 
+const safeImportant = require('postcss-safe-important');
+const increaseSpecificity = require('postcss-increase-specificity');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
@@ -192,7 +194,7 @@ module.exports = {
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
                         modules: true,
-                        localIdentName: 'charliehr-[local]',
+                        localIdentName: 'CharlieHR-[local]',
                       },
                     },
                     {
@@ -203,6 +205,13 @@ module.exports = {
                         ident: 'postcss',
                         plugins: () => [
                           require('postcss-flexbugs-fixes'),
+                          safeImportant(),
+                          increaseSpecificity({
+                            repeat: 1,
+                            overrideIds: false,
+                            stackableRoot: '.cleanslate',
+                            excludePaths: path.resolve(__dirname, '../src/shared/cleanslate.css'),
+                          }),
                           autoprefixer({
                             browsers: [
                               '>1%',

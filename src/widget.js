@@ -43,7 +43,7 @@ const CharlieHR = {
     setup: (elementID) => {
       // Add widget css to page
       const styles = document.createElement('link');
-      styles.href = 'build/static/css/widget.css';
+      styles.href = 'https://s3-eu-west-1.amazonaws.com/charlie-production/downloads/widget.css';
       styles.type = 'text/css';
       styles.rel = 'stylesheet';
 

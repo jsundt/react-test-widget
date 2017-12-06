@@ -1,2 +1,11 @@
-.test {
-  color: red; }
+.cleanslate {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.button {
+  background-color: red;
+  padding: 20px;
+  background-image: none; }
+
+.buttonActive {
+  background-color: green; }

@@ -1,5 +1,7 @@
 'use strict';
 
+const safeImportant = require('postcss-safe-important');
+const increaseSpecificity = require('postcss-increase-specificity');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
@@ -88,7 +90,7 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-      
+
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -180,6 +182,13 @@ module.exports = {
                   ident: 'postcss',
                   plugins: () => [
                     require('postcss-flexbugs-fixes'),
+                    safeImportant(),
+                    increaseSpecificity({
+                      repeat: 1,
+                      overrideIds: false,
+                      stackableRoot: '.cleanslate',
+                      excludePaths: path.resolve(__dirname, '../src/shared/cleanslate.css'),
+                    }),
                     autoprefixer({
                       browsers: [
                         '>1%',
